@@ -128,17 +128,18 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="card">
                         <div class="card-header">
-                            Number of days the connection is valid
+                            Historical transaction period
                         </div>
                         <div class="card-body">
                             <div class="form-group row">
-                                <label for="days" class="col-sm-3 col-form-label">Number of days the connection is valid</label>
+                                <label for="days" class="col-sm-3 col-form-label">Number of days to fetch transactions for</label>
                                 <div class="col-sm-9">
                                     <input name="days" class="form-control" step="1" min="1" type="number"
                                            value="{{ $configuration->getNordigenMaxDays() }}"/>
                                     <small class="form-text text-muted">
-                                        The connection to your bank can be recycled for this number of days. It will be stored
-                                        in the import configuration file. Keep in mind most banks don't support more than 90 days.
+                                        This value determines how far back in time transactions will be fetched from your bank. 
+                                        For example, setting this to 30 will fetch transactions from the last 30 days. 
+                                        Keep in mind most banks don't support more than 90 days of historical data.
                                     </small>
                                 </div>
                             </div>
